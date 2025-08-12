@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An interactive circular stopwatch to measure time and track laps with keyboard controls and more.">
+    <meta name="author" content="Gemini AI">
+    <title>Interactive Stopwatch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main-container">
+        <div class="stopwatch-container" id="stopwatchContainer">
+            <div class="timer-display" id="timerDisplay" aria-live="polite">
+                00:00:00.00
+            </div>
+            <div class="controls">
+                <button id="startBtn" class="btn btn-start" aria-label="Start Timer">Start</button>
+                <button id="pauseBtn" class="btn btn-pause" aria-label="Pause Timer">Pause</button>
+                <button id="resetBtn" class="btn btn-reset" aria-label="Reset Timer">Reset</button>
+                <button id="lapBtn" class="btn btn-lap" aria-label="Record Lap">Lap</button>
+            </div>
+        </div>
+
+        <div class="laps-section">
+            <div class="laps-header">
+                <h2>Laps</h2>
+                <button id="exportBtn" class="btn-export" title="Export Laps as .txt">Export</button>
+            </div>
+            <div class="laps-container">
+                <ul class="laps-list" id="lapsList">
+                    </ul>
+            </div>
+            <div class="keyboard-shortcuts">
+                <p><b>Shortcuts:</b> <b>S</b> - Start/Pause | <b>R</b> - Reset | <b>L</b> - Lap</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
